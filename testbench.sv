@@ -44,24 +44,24 @@ module testbench;
 //assigning handle name for class
   clock_gen clk_obj;
   reset_gen rst_obj;
-  stimulus stim_obj;
+  simulus sim_obj;
 
 
   initial begin
     clk_obj = new(intf);
     rst_obj = new(intf);
-    stim_obj = new(intf, DEPTH);
+    sim_obj = new(intf, DEPTH);
     fork
       clk_obj.clk_task();
       rst_obj.rst_task();
       begin
         #100;
-        stim_obj.basic_write_read_test();
-        stim_obj.underflow_test();
-        stim_obj.overflow_test();
-        stim_obj.simultaneous_read_write_empty_test();
-        stim_obj.simultaneous_read_write_full_test();
-        $display("Test completed with %0d errors", stim_obj.error_count);
+        sim_obj.basic_write_read_test();
+        sim_obj.underflow_test();
+        sim_obj.overflow_test();
+        sim_obj.simultaneous_read_write_empty_test();
+        sim_obj.simultaneous_read_write_full_test();
+        $display("Test completed with %0d errors", sim_obj.error_count);
         $finish;
       end
     join

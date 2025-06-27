@@ -1,8 +1,8 @@
 //Include files
 `include "interface.svh"
-`include "Clock_generation.svh"
-`include "reset.svh"
-`include "stimulus.svh"
+`include "clock_generation.svh"
+`include "reset_generation.svh"
+`include "simulus_generation.svh"
 
 //module declaration
 module testbench;

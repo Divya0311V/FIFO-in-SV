@@ -1,6 +1,6 @@
 //Include files
 `include "interface.svh"
-`include "clock.svh"
+`include "Clock_generation.svh"
 `include "reset.svh"
 `include "stimulus.svh"
 
